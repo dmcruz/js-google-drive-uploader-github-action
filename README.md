@@ -9,8 +9,8 @@ I converted it to js and added my customization.
 
 Github action to upload files to Google Drive using a service account.
 
-(Forked from https://github.com/willo32/google-drive-upload-action)
-(Forked from https://github.com/wodndb/google-drive-upload-action)
+- Main code from https://github.com/willo32/google-drive-upload-action
+- Forked from https://github.com/wodndb/google-drive-upload-action
 
 ## Usage
 
