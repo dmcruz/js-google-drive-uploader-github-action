@@ -1,0 +1,23 @@
+name: 'JS Google Drive Uploader Github Action'
+description: 'Upload to Google Drive using service account'
+inputs:
+  credentials:
+    description: "Google service account credentials"
+    required: true
+  parent_folder_id:
+    description: "Google Drive folder ID to upload the file to"
+    required: true
+  target:
+    description: "Local path to the files to upload (multiple lines)"
+    required: true
+  owner:
+    description: "Optional user account email (Require domain-wide authority delegation)"
+    required: false
+    default: null
+  child_folder:
+    description: "Optional sub-folder to upload the file to (Will be created if non-existent)"
+    required: false
+    default: null
+runs:
+  using: 'node18'
+  main: 'index.js'
