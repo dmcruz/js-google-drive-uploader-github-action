@@ -2,7 +2,7 @@
 
 This action is credits to @willo32 and @wodndb
 
-It is based form the fork from @wodndb but somehow because it is typescript, I ran into some type errors while customizing it. 
+It is based form the fork from @wodndb (main code belongs to @willo32) but I ran into some type errors while customizing it. 
 I converted it to js and added my customization.
 
 ## Overview
@@ -21,14 +21,16 @@ steps:
     - uses: actions/checkout@v3
 
     - name: Upload files to Google Drive
-      uses: wodndb/google-drive-upload-action@v1
+      uses: dmcruz/js-google-drive-uploader-github-action@v1.3.1
       with:
         target: |-
-          <LOCAL_PATH_TO_YOUR_FILES_1>
-          <LOCAL_PATH_TO_YOUR_FILES_2>
-          ...
+          app/build/outputs/apk/!(demo)/release/*.apk
+          app/build/outputs/apk/!(demo)/release/*.json
+
         credentials: ${{ secrets.<YOUR_SERVICE_ACCOUNT_CREDENTIALS> }}
         parent_folder_id: <YOUR_DRIVE_FOLDER_ID>
+        #child_folder: optional
+        #owner: optional
 ```
 
 ### Inputs
@@ -36,6 +38,16 @@ steps:
 #### `target` (Required):
 
 Local path to the files to upload, can be relative from github runner current directory.
+
+Accepts multiple values. Pattern matching is accepted using glob.
+
+Sample values:
+
+```
+app/build/outputs/apk/(!demo)/release/*.apk
+src/*.js
+src/data/*.json
+```
 
 #### `credentials` (Required):
 
