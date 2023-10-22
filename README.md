@@ -81,4 +81,4 @@ The email address of a user account that has access to the drive folder and will
 
 ## For developer
 
-- You should run `yarn build` and push build file before release.
+- You should run `npm run build` and push build file (`dist/index.js`) before release.

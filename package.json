@@ -1,7 +1,7 @@
 {
   "name": "js-google-drive-uploader-github-action",
   "version": "1.3.0",
-  "description": "",
+  "description": "Upload to Google Drive using service account, supports glob patterns",
   "main": "index.js",
   "scripts": {
     "build": "ncc build index.js"
