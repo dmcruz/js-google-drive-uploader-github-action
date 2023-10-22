@@ -1,5 +1,5 @@
-import fs from "fs";
-import * as core from "@actions/core";
+const fs = require('fs');
+const core = require('@actions/core');
 import { google } from "googleapis";
 import { glob } from "glob";
 
