@@ -21,7 +21,7 @@ steps:
     - uses: actions/checkout@v3
 
     - name: Upload files to Google Drive
-      uses: dmcruz/js-google-drive-uploader-github-action@v1.3.1
+      uses: dmcruz/js-google-drive-uploader-github-action@v1.4
       with:
         target: |-
           app/build/outputs/apk/!(demo)/release/*.apk
