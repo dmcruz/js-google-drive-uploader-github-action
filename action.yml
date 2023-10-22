@@ -1,5 +1,5 @@
-name: 'JS Google Drive Uploader Github Action'
-description: 'Upload to Google Drive using service account'
+name: 'JS Google Drive Uploader Action with glob'
+description: 'Upload to Google Drive using service account, supports glob patterns'
 inputs:
   credentials:
     description: "Google service account credentials"
